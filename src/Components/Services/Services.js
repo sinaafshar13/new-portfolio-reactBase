@@ -1,33 +1,39 @@
 import "./Services.css";
 import ServicesItem from "./ServicesItem";
 function Services() {
-  let service = [
+  let services = [
     {
+      id: 0,
       icon: "bi bi-briefcase",
       title: "WEB DESIGN",
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
     },
     {
+      id: 1,
       icon: "bi bi-card-checklist",
       title: "WEB DEVELOPMENT",
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
     },
     {
+      id: 2,
       icon: "bi bi-bar-chart",
       title: "PHOTOGRAPHY",
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
     },
     {
+      id: 3,
       icon: "bi bi-binoculars",
       title: "RESPONSIVE DESIGN",
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
     },
     {
+      id: 4,
       icon: "bi bi-brightness-high",
       title: "GRAPHIC DESIGN",
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
     },
     {
+      id: 5,
       icon: "bi bi-calendar4-week",
       title: "MARKETING SERVICES",
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
@@ -43,12 +49,9 @@ function Services() {
           </p>
         </div>
         <div className="row">
-          <ServicesItem {...service[0]} />
-          <ServicesItem {...service[1]} />
-          <ServicesItem {...service[2]} />
-          <ServicesItem {...service[3]} />
-          <ServicesItem {...service[4]} />
-          <ServicesItem {...service[5]} />
+          {services.map( (service) =>  (
+            <ServicesItem key={service.id} {...service}/>
+          ))}
         </div>
       </div>
     </section>

@@ -5,8 +5,9 @@ import ImgBlog2 from '../../assets/img/post-2.jpg'
 import ImgBlog3 from '../../assets/img/post-3.jpg'
 
 function Blog() {
-  let post = [
+  let posts = [
     {
+      id: 0,
       img: ImgBlog1,
       title: "post title 1",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
@@ -14,6 +15,7 @@ function Blog() {
       date: "10",
     },
     {
+      id: 1,
         img: ImgBlog2,
         title: "post title 2",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
@@ -21,6 +23,7 @@ function Blog() {
         date: "15",
       },
       {
+        id: 2,
         img: ImgBlog3,
         title: "post title 3",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
@@ -30,17 +33,17 @@ function Blog() {
   ];
   return (
     <section id="blog">
-      <div class="container">
-        <div class="section-info">
-          <h2 class="section-title">BLOG</h2>
-          <p class="section-desc">
+      <div className="container">
+        <div className="section-info">
+          <h2 className="section-title">BLOG</h2>
+          <p className="section-desc">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
-        <div class="row">
-          <BlogItem {...post[0]}/>
-          <BlogItem {...post[1]}/>
-          <BlogItem {...post[2]}/>
+        <div className="row">
+          {posts.map(post => (
+            <BlogItem key = {post.id} {...post}/>
+          ))}
         </div>
       </div>
     </section>

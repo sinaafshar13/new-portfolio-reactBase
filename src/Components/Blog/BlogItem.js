@@ -1,23 +1,23 @@
 
 function BlogItem({img , title, desc, author, date}) {
     return (
-        <div class="col-4">
-            <div class="blog-box">
-              <div class="blog-img">
-                <img src={img} class="img-fluid" />
+        <div className="col-4">
+            <div className="blog-box">
+              <div className="blog-img">
+                <img src={img} className="img-fluid" alt="post-1" />
               </div>
-              <div class="blog-content">
-                <h3 class="blog-title">{title}</h3>
-                <p class="blog-desc">
+              <div className="blog-content">
+                <h3 className="blog-title">{title}</h3>
+                <p className="blog-desc">
                   {desc}
                 </p>
               </div>
-              <div class="blog-footer">
-                <div class="post-author">
-                  <p class="author">{author}</p>
+              <div className="blog-footer">
+                <div className="post-author">
+                  <p className="author">{author}</p>
                 </div>
-                <div class="post-date">
-                  <span class="bi bi-clock"></span> {date} min
+                <div className="post-date">
+                  <span className="bi bi-clock"></span> {date} min
                 </div>
               </div>
             </div>
